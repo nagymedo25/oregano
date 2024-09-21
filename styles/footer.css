@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --gold-- : hsla(38, 61%, 73%);
+    --gray-- : #161616;
+}
+
+/* font-family: "Merriweather", serif; */
+
+footer {
+    background-color: #161616;
+    color: rgb(155, 151, 151);
+    padding: 7rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    font-family: sans-serif;
+    background-image: url(images/footer.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    z-index: 1;
+}
+
+footer::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+
+footer img {
+    height: 80px;
+}
+
+footer .right , .left {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    flex-grow: 1;
+    margin-top: 100px;
+}
+
+footer .right li , .left li {
+    margin-bottom: 20px;
+    transition: .4s;
+}
+
+footer .right li:hover , .left li:hover {
+    color: var(--gold--);
+}
+
+footer .center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column;
+    text-align: center;
+    gap: 70px;
+    position: relative;
+}
+
+footer .center .bone-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+footer .center .bone-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+footer .center .bone-left , .bone-right {
+    height: 100%;
+    width: 20px;
+}
+
+footer .center .logo {
+    margin-bottom: 15px;
+}
+
+footer .center .logo img {
+    border-radius: 20px;
+
+}
+
+footer .center .info * {
+    margin-bottom: 10px;
+}
+
+footer .center .get-offers .title {
+    margin-bottom: 25px;
+}
+
+footer .center .get-offers .title h1 {
+    font-size: 30px;
+    font-family: "Merriweather", serif;
+    color: white;
+}
+
+footer span {
+    color: white;
+}
+
+footer .center .get-offers .email {
+    background-color: #161616;
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    position: relative;
+}
+
+footer .center .get-offers .email input {
+    height: 100%;
+    color: white;
+    background-color: #161616;
+    width: 300px;
+    padding: 10px 0px 10px 60px;
+    font-size: 12px;
+    
+}
+
+footer .center .get-offers .email input::placeholder {
+    color: white;
+}
+
+footer .center .get-offers .email i {
+    padding:  0 20px;
+    position: absolute;
+    left: 0px;
+    top: 35%;
+
+}
+
+footer .center .get-offers .email button {
+    background-color: var(--gold--);
+    padding: 15px 40px;
+    color: black;
+    letter-spacing: 3px;
+    border: 1px solid var(--gold--);
+    transition: .4s;
+}
+
+
+footer .copyright {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 3rem;
+    font-size: 15px;
+}
+
+@media (max-width: 1004px) {
+    footer .center .get-offers .email button {
+        padding: 8px 20px;
+    }
+
+    footer .center .get-offers .email input {
+      width: 200px;      
+    }
+}
+
+@media (max-width: 931px) {
+    footer {
+        background-color: #161616;
+        color: rgb(155, 151, 151);
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-flow: column-reverse;
+    }
+
+
+    footer .center .get-offers .email button {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+
+    footer .center .get-offers .email input {
+        padding: 15px;
+    }
+
+    footer .center .get-offers .email i {
+        display: none;
+    }
+
+    footer .center .get-offers .email {
+        background-color: #161616;
+        width: 50%;
+        margin-bottom: 30px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+    }
+
+    footer .right {
+        padding-bottom: 8rem;
+    }
+
+    footer .center {
+        padding: 0;
+        width: 100%;
+    }
+
+    
+    footer .center .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .center .get-offers {
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+    }
+
+    footer .copyright {
+        font-size: 13px;
+    }
+
+
+
+}

@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --gold-- : hsla(38, 61%, 50%); /* تعديل درجة الذهب لتناسب الخلفية الفاتحة */
+    --gray-- : #f0f0f0; /* خلفية فاتحة للصفحات */
+    --text-color-- : #333; /* لون النصوص الأساسي */
+    --card-bg-- : #ffffff; /* خلفية الكروت */
+    --border-color-- : #dcdcdc; /* لون الحدود */
+}
+
+/* font-family: "Merriweather", serif; */
+
+.demo-menu {
+  background-color: #ffffff;
+  color: var(--text-color--);
+  font-family: "Merriweather", serif;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.demo-menu .title h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.demo-menu .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.demo-menu .content .card {
+  height: 380px;
+  width: 300px;
+  border: 1px solid var(--border-color--);
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: var(--card-bg--);
+}
+
+.demo-menu .content .card img {
+  width: 100%;
+  height: 250px;
+  display: block;
+  transition: .4s;
+}
+
+.demo-menu .content .card img:hover {
+  scale: 1.05;
+}
+
+.demo-menu .content .card::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(45deg, transparent 49%, rgba(169, 169, 169, 0.7) 50%, transparent 51%);
+  background-size: 200% 200%;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.demo-menu .content .card:hover::before {
+  animation: shine 1s linear infinite;
+  opacity: 1;
+}
+
+.demo-menu .content .card .info {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column;
+  color: var(--text-color--);
+  z-index: 2;
+}
+
+.demo-menu .content .card .info h1 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 40px;
+  color: var(--text-color--);
+  font-family: "Merriweather", serif;
+}
+
+.demo-menu .content .card .info button {
+  position: relative;
+  padding-bottom: 6px;
+  transition: 0.3s;
+  font-family: sans-serif;
+}
+
+.demo-menu .content .card .info button:hover {
+  color: var(--gold--);
+}
+
+.demo-menu .content .card .info button::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: var(--gold--);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: 0.4s;
+}
+
+.demo-menu .content .card .info button:hover::after {
+  transform: scaleX(1);
+}
+
+@keyframes shine {
+  0% {
+    background-position: -100% -100%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@media (max-width: 524px) {
+  .demo-menu .title h1 {
+    font-size: 30px;
+  }
+}
+
+.about-sec {
+    background-color: var(--gray--);
+    display: flex;
+    flex-flow: column;
+    color: var(--text-color--);
+    font-family: "Merriweather", serif; 
+    padding: 40px 0;
+}
+
+.about-sec .title h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.about-sec .about {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row-reverse;
+    gap: 40px;
+    padding: 0 30px;
+    margin-bottom: 30px;
+}
+
+.about-sec .about .info {
+    width: 50%;
+}
+
+.about-sec .about .info h1 {
+    font-size: 30px;
+    color: var(--gold--);
+    margin-bottom: 5px;
+}
+
+.about-sec .about .info h1 span {
+    color: var(--text-color--);
+}
+
+.about-sec .about .info p {
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.about-sec .about .image {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.about-sec .about .image img {
+    border-radius: 20px;
+    border: 1px solid var(--border-color--);
+    transition: .5s;
+}
+
+.about-sec .about .image img:hover {
+    scale: 1.01;
+    box-shadow: 0px 0px 10px 0px var(--gold--);
+}
+
+.about-sec .chefs {
+    padding: 0 40px;
+    text-align: center;
+}
+
+.about-sec .chefs .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.about-sec .chefs .card {
+    width: fit-content;
+}
+
+.about-sec .chefs .card .iamge {
+    height: 170px;
+    border: 2px solid var(--gold--);
+    width: 170px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background-color: rgb(161, 161, 161);
+    transition: .3s;
+}
+
+.about-sec .chefs .card .iamge:hover {
+    animation: image 1.5s ease infinite;
+    box-shadow: 0px 0px 10px 0px var(--gold--);
+}
+
+@keyframes image {
+    50% {
+        transform: translateY(-20px);
+        transition: 0.5s;
+    }
+    100% {
+        transform: translateY(0px);
+        transition: 0.5s;
+    }
+}
+
+.about-sec .chefs .card .iamge img {
+    object-fit: cover;
+    height: 170px;
+}
+
+.about-sec .chefs .card .iamge h2 {
+    font-size: 24px;
+}
+
+.about-sec .chefs .card h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: sans-serif !important;
+    font-weight: bold;
+}
+
+.about-sec .chefs .card i {
+    color: var(--gold--);
+}
+
+@media (max-width: 1115px) {
+    .about-sec .about {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: column;
+        gap: 40px;
+        padding: 0 30px;
+        margin-bottom: 30px;
+    }
+    
+    .about-sec .about .info {
+        width: 100%;
+    }
+    
+    .about-sec .about .info h1 {
+        font-size: 20px;
+        color: var(--gold--);
+        margin-bottom: 5px;
+    }
+    
+    .about-sec .about .info p {
+        font-size: 16px;
+        font-family: sans-serif;
+    }
+    
+    .about-sec .about .image {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .about-sec .about .image img {
+        height: 350px;
+        width: 100%;
+        padding: 0;
+        border-radius: 20px;
+        border: 1px solid var(--border-color--);
+        transition: .5s;
+    }
+}
+
+.table-sec {
+    background-color: #f9f9f9;
+    color: var(--text-color--);
+    padding-top: 2rem;
+}
+
+.table-sec .title h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: "Merriweather", serif;
+    margin-bottom: 2rem;
+}
+
+.table-sec .content {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-top: 2px solid var(--gold--);
+    border-bottom: 2px solid var(--gold--);
+}
+
+.table-sec .content h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.table-sec .content h2 a {
+    color: var(--gold--);
+}
+
+.table-sec .content .form {
+    width: 60%;
+}
+
+.table-sec .content .table {
+    width: 80%;
+    border-radius: 10px;
+}
+
+.table-sec .content .table thead th {
+    color: var(--gold--);
+}
+
+.table-sec .content .table td,
+.table-sec .content .table th {
+    padding: 1rem;
+}
+
+.table-sec .content .table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table-sec .content .table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.table-sec .content .table tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+
+.table-sec .content form *::placeholder {
+    color: black;
+}

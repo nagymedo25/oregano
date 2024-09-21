@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --gold-- : hsla(38, 61%, 73%);
+    --gray-- : #161616;
+}
+
+/* font-family: "Merriweather", serif; */
+
+
+.demo-menu {
+  background-color: black;
+  color: white;
+  font-family: "Merriweather", serif;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.demo-menu .title h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.demo-menu .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+
+.demo-menu .content .card {
+  height: 380px;
+  width: 300px;
+  border: 1px solid var(--gold--);
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+
+  /* Hidden shine effect by default */
+}
+
+.demo-menu .content .card img {
+  width: 100%;
+  height: 250px;
+  display: block;
+  transition: .4s;
+}
+
+.demo-menu .content .card img:hover {
+  scale: 1.05;
+}
+
+.demo-menu .content .card::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(45deg, transparent 49%, rgba(169, 169, 169, 0.7) 50%, transparent 51%);
+  background-size: 200% 200%;
+  opacity: 0; /* Hidden by default */
+  z-index: 1; /* Ensure the shine effect is above the image */
+  pointer-events: none; /* Prevent interference with interactions */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition */
+}
+
+.demo-menu .content .card:hover::before {
+  animation: shine 1s linear infinite ;
+  opacity: 1;
+}
+
+.demo-menu .content .card .info {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column;
+  color: white;
+  z-index: 2; /* Ensure content is above the shine effect */
+}
+
+.demo-menu .content .card .info h1 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 40px;
+  color: white;
+  font-family: "Merriweather", serif;
+}
+
+.demo-menu .content .card .info button {
+  position: relative;
+  padding-bottom: 6px ;
+  transition: 0.3s;
+  font-family: sans-serif;
+}
+
+.demo-menu .content .card .info button:hover {
+  color:  var(--gold--);
+}
+
+.demo-menu .content .card .info button::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: var(--gold--);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: 0.4s;
+}
+
+.demo-menu .content .card .info button:hover::after {
+  transform: scaleX(1);
+}
+
+@keyframes shine {
+  0% {
+      background-position: -100% -100%;
+  }
+  100% {
+      background-position: 100% 100%;
+  }
+}
+
+@media (max-width: 524px) {
+    .demo-menu .title h1 {
+      font-size: 30px;
+    }
+}

@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --gold-- : hsla(38, 61%, 73%);
+    --gray-- : #161616;
+}
+
+
+/* font-family: "Merriweather", serif; */
+
+
+.table-sec {
+    background-color: black;
+    color: white;
+    padding-top: 2rem ;
+}
+
+.table-sec .title h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: "Merriweather", serif;
+    margin-bottom: 2rem;
+}
+
+.table-sec .content {
+    background-color: var(--gray--);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-top: 2px solid var(--gold--);
+    border-bottom: 2px solid var(--gold--);
+}
+
+.table-sec .content h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.table-sec .content h2 a {
+    color: var(--gold--);
+}
+
+
+.table-sec .content .form {
+    width: 60%;
+}
+
+.table-sec .content .image2 {
+    display: none;
+}
+
+.table-sec .content .form form {
+    width: 100%;
+    font-size: 13px;
+    height: 400px;
+    display: grid;
+    grid-template-rows: repeat(3 , 1fr);
+    grid-template-columns: repeat(12 , 1fr);
+    gap: 20px;
+
+}
+
+.table-sec .content form * {
+    background-color: var(--gray--);
+    border: 1px solid gray;
+    transition: .5s;
+}
+
+.table-sec .content form .name-input {
+    grid-column: 1/7;
+}
+
+.table-sec .content form .phone-input {
+    grid-column: 7/13;
+}
+
+.table-sec .content form .person {
+    grid-column: 1/5;
+}
+
+.table-sec .content form .date {
+    grid-column: 5/9;
+}
+
+.table-sec .content form .time {
+    grid-column: 9/13;
+}
+
+.table-sec .content form textarea {
+    grid-column: 1/13;
+}
+
+.table-sec .content form button {
+    grid-column: 1/13;
+}
+
+
+
+.table-sec .content form input[type="text"] {
+    padding: 15px;
+}
+
+.table-sec .content form *::placeholder {
+    color: white;
+}
+
+.table-sec .content form div {
+    padding: 15px;
+    cursor: pointer;
+}
+
+.table-sec .content form .person , .date , .time {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.table-sec .content form  .date input,
+.table-sec .content form select {
+    border: none;
+    width: 80%;
+}
+
+
+
+.table-sec .content form i {
+    border: none;
+}
+
+
+.table-sec .content form textarea {
+    resize: none;
+    padding: 15px;
+    height: 10rem;
+
+}
+
+.table-sec .content form button {
+    background-color: var(--gold--);
+    padding: 15px 30px;
+    color: black;
+    letter-spacing: 3px;
+    border: 1px solid var(--gold--);
+    transition: .4s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.table-sec .content .image {
+    width: 48%;
+    height: 600px;
+    border-left: 2px solid var(--gold--) ;
+    position: relative;
+    z-index: 1;
+}
+
+.table-sec .content .image .table {
+    height: 100%;
+    object-fit: cover;
+}
+
+.table-sec .content .image .logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.table-sec .content .image .logo .oregano {
+    height: 70px;
+    border-radius: 20px;
+}
+
+.table-sec .content .image  .contact {
+    font-size: 25px;
+    color: var(--gold--);
+    font-weight: bold;
+    transition: .4s;
+}
+
+.table-sec .content .image  .contact:hover {
+    scale: 1.1;
+    text-shadow: 0px 0px 5px black;
+    color: rgb(180, 152, 102) ; 
+
+}
+
+
+
+.table-sec .content .image::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    left: 0;
+}
+
+.table-sec .content .image .info {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.table-sec .content .image .info>h1 {
+    font-size: 50px;
+    color: var(--gold--);
+    margin-bottom: 20px;
+    font-family: "Merriweather", serif;
+    text-shadow: 0px 0px 5px black;
+}
+
+.table-sec .content .image .info span {
+    text-shadow: 0px 0px 10px black;
+
+}
+
+.table-sec .content .image .info div  {
+     width: 180px;
+     margin-bottom: 20px;
+}
+
+.table-sec .content .image .info div span {
+    font-size: 19px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.table-sec .content .image .info div h1 {
+    color: var(--gold--);
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.table-sec .content .form form {
+    padding-left: 2rem;
+}
+
+.table-sec .content .form form button:hover {
+    color: var(--gold--);
+    background-color: #16161600;
+}
+
+
+@media (max-width: 930px) {
+    
+    .table-sec .content {
+        background-color: var(--gray--);
+        display: flex;
+        flex-flow: column-reverse;
+        border-top: 2px solid var(--gold--);
+    }
+
+    
+    .table-sec .content .form form {
+        width: 100%;
+        font-size: 13px;
+        display: flex;
+        flex-flow: wrap;
+        gap: 20px;
+        height: fit-content;
+        padding-left: 2rem;
+    }
+
+    .table-sec .content .form {
+        width: 100%;
+        padding-right: 2rem;
+    }
+
+    .table-sec .content .form form input , div , textarea {
+        width: 100%;
+    }
+
+    .table-sec .content .form form button {
+        margin-bottom: 3rem;
+        width: 100%;
+
+    }
+
+    .table-sec .content .image {
+        width: 100%;
+        height: 600px;
+        position: relative;
+        z-index: 1;
+        border: none;
+    }
+
+    .table-sec .content .image * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .table-sec .content .image .logo {
+        left: 0;
+    }
+
+    .table-sec .content .image .info {
+        left: 0;
+        width: 100%;
+        height: 300px;
+    }
+    
+
+}
+
+@media (max-width: 680px) {
+    .table-sec .title h1 {
+        text-align: center;
+        font-size: 30px;
+        font-family: "Merriweather", serif;
+        margin-bottom: 2rem;
+    }
+
+    .table-sec .content h2 {
+        margin-bottom: 2rem;
+        text-align: center;
+        font-size: 11px;
+    }
+}

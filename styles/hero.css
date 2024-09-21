@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --gold-- : hsla(38, 61%, 73%);
+    --gray-- : #161616;
+}
+
+
+* , *::after , *::before  {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* font-family: "Merriweather", serif; */
+
+/* scroll costumaization */
+
+/* تخصيص الشريط نفسه */
+::-webkit-scrollbar {
+    width: 12px; /* عرض شريط التمرير */
+}
+
+/* تخصيص المسار داخل شريط التمرير */
+::-webkit-scrollbar-track {
+    background: #272727; /* لون الخلفية */
+}
+
+/* تخصيص المقبض (الجزء المتحرك) */
+::-webkit-scrollbar-thumb {
+    background-color: var(--gold--); /* لون المقبض */
+}
+
+
+.scroll {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: var(--gold--);
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    display: none;
+    z-index: 999;
+}
+
+
+
+.hero-sec .toggel {
+    display: none;
+}
+
+.hero-sec .close {
+    display: none;
+}
+
+.hero-sec {
+  color: white;
+  background-color: var(--gray--);
+  background-image: url(images/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  animation: hero 10s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+  height: 110vh;
+
+}
+
+
+
+.hero-sec::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+.hero-sec .top-par {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    border-bottom: 1px solid var(--gold--);
+}
+
+
+@keyframes hero {
+    50% {
+        background-size: 125% ;
+    }
+    100% {
+        background-size: 100% ;
+    }
+}
+
+.hero-sec .top-par .location {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-sec .top-par .contact {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-sec header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    margin-bottom: 6rem;
+    padding-top: 5rem;
+
+}
+
+
+.hero-sec header ul, li button {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.hero-sec header .hover {
+    position: relative;
+    padding-bottom: 6px;   
+    transition: .4s;
+}
+
+.hero-sec header .hover:hover {
+    color: var(--gold--);
+}
+
+.hero-sec header .hover::before {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: var(--gold--);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: .3s;
+
+}
+
+.hero-sec header .hover:hover::before {
+    transform: scaleX(1);
+}
+
+.hero-sec header .logo {
+    border-radius: 20px;
+    height: 80px;
+    transition: .4s;
+}
+
+.hero-sec header .logo:hover {
+    transform: translateY(-10px);
+}
+
+.hero-sec  button {
+    background-color: var(--gold--);
+    padding: 15px 30px;
+    color: black;
+    letter-spacing: 3px;
+    border-radius: 5px;
+    border: 1px solid var(--gold--);
+    transition: .4s;
+}
+
+.hero-sec header ul button:hover {
+    background-color: #16161600;
+    border: 1px solid var(--gold--);
+    color: var(--gold--);
+}
+
+.hero-sec .discreption  {
+    text-align: center;
+}
+
+
+
+.hero-sec .discreption h1 {
+    display: flex;
+    flex-flow: column;
+    font-size: 55px;
+    font-family: "Merriweather", serif; 
+    margin-bottom: 20px;
+}
+
+.hero-sec .discreption p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.hero-sec .discreption button {
+    margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--gold--);
+    border: 2px solid var(--gold--);
+    font-size: 18px;
+
+}
+
+.hero-sec .discreption button:hover {
+    background-color: var(--gold--);
+    color: black;
+}
+
+@media (max-width: 979px) {
+    
+    .hero-sec {
+        animation: none;
+        background-size: cover;
+            display: grid;
+            place-items: center
+    }
+    
+    .hero-sec .top-par {
+        display: none;
+    }
+
+    .hero-sec header ul {
+
+         background-color: #161616;
+         height: 100%;
+         width: 100%;
+         display: flex;
+         flex-flow: column;
+         justify-content: center;
+         transition:  1s ease; /* وقت وتأثير الحركة */
+    }
+
+    .active-ul {
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 999;
+    }
+
+    .close-ul {
+        position: fixed;
+        right: 0;
+        top: -1000px;
+    }
+
+    .hero-sec header ul .close {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        padding: 0;
+        height: 40px;
+        width: 40px;
+        font-size: 18px;
+        text-align: center;
+        font-weight: bold;
+        display: block;
+    }
+
+    .hero-sec .toggel {
+        display: block;
+        font-size: 20px;
+        padding: 13px 22px;
+    }
+}
+
+
+@media (max-width: 680px) {
+    
+    .hero-sec {
+        display: grid;
+        place-items: center;
+    }
+    
+    .hero-sec .discreption h1 {
+       font-size: 37px;
+    }
+
+    .hero-sec .discreption button {
+        padding: 7px 20px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 513px) {
+    
+    .hero-sec {
+        display: grid;
+        place-items: center;
+    }
+    
+    .hero-sec .discreption h1 {
+       font-size: 28px;
+    }
+
+    .hero-sec .discreption p {
+       font-size: 14px;
+       padding: 20px 30px ;
+    }
+
+    .hero-sec .discreption button {
+        padding: 7px 20px;
+        margin-bottom: 50px;
+    }
+
+    .hero-sec header .logo {
+        border-radius: 20px;
+        height: 60px;
+    
+    }
+
+    .hero-sec .toggel {
+        display: block;
+        font-size: 20px;
+        padding: 8px 14px;
+    }
+
+    .hero-sec .toggel:hover {
+        color: var(--gold--);
+        background-color: #27272700;
+    }
+    
+}
+
+

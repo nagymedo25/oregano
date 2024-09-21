@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- footer -->
+
+    <link rel="stylesheet" href="footer.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="images/oregano.jpg">
+    <title>Oregano - Menu / منيو </title>
+</head>
+<body>
+    
+   <!-- side bar -->
+
+   <div id="overLay" class="overLay"></div>
+
+   <div id="side-bar" class="side-bar">
+    <div class="side-container">
+        <div class="head">
+            <button id="close" class="close-btn" aria-label="Close sidebar">X</button>
+            <h1>My Cart</h1>
+        </div>
+       
+       
+        <div class="content">
+            <div id="elements" class="elements">
+                <!-- العناصر ستظهر هنا -->
+            </div>
+        </div>
+       
+       
+       
+        <div class="controls">
+            <div class="total">
+                <h1>Total :</h1>
+                <span>$00.00</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()" aria-label="Checkout">Check Out</button>
+        </div>
+    </div>  
+   </div>
+   
+   
+   
+   
+    <!-- container full project -->
+
+     
+     <div class="container">
+
+        <header>
+            <img class="logo" src="images/oregano.jpg" alt="">
+            <input type="search" placeholder="search">
+            <button id="open" class="cart-button open-btn"><i class="fa-solid fa-cart-shopping"></i></button>      
+       </header>
+
+       <div class="back-ground">
+           <h1>Oregano - Menu</h1>
+           <p>We have a full menu that includes the most delicious food</p>
+       </div>
+
+
+       <div class="filter-menu">
+            <h1>FOOD MENU</h1>
+            
+
+            <div class="cards">                
+                <div id = "" class="card selector">
+                   <img src="images/pizza.png" alt="">
+                   <h1>pizza</h1>
+                </div>
+   
+                <div id = "" class="card selector">
+                   <img src="images/burgar.png" alt="">
+                   <h1>burgar</h1>
+                </div>
+   
+                <div id = "" class="card selector">
+                   <img src="images/chicken.png" alt="">
+                   <h1>chicken</h1>
+                </div>
+   
+                <div id = "" class="card selector">
+                   <img src="images/milkchek.png" alt="">
+                   <h1>milkchek</h1>
+                </div>
+   
+                <div id = "" class="card selector">
+                   <img src="images/cola.png" alt="">
+                   <h1>cola drinks</h1>
+                </div>
+   
+                <div id = "" class="card selector">
+                   <img src="images/coffie.png" alt="">
+                   <h1>coffie</h1>
+                </div>
+            </div>
+
+       
+       
+      </div>
+
+
+      <div class="food-items">
+         
+          <h1>FOOD ITEMS</h1>
+           
+        
+          <div id="items-container">
+
+            <div id="items" class="pizza-sec items">
+
+                <div class="cards">
+            
+                    <div class="big-card">
+                        <img src="images/pizza.png" alt="">
+                        <h1>Margherita Pizza</h1>
+                        <div class="control">
+                           <p>$12</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/pizza.png" alt="">
+                        <h1>Pepperoni Pizza</h1>
+                        <div class="control">
+                           <p>$15</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/pizza.png" alt="">
+                        <h1>BBQ Chicken Pizza</h1>
+                        <div class="control">
+                           <p>$17</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/pizza.png" alt="">
+                        <h1>Four Cheese Pizza</h1>
+                        <div class="control">
+                           <p>$14</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/pizza.png" alt="">
+                        <h1>Veggie Pizza</h1>
+                        <div class="control">
+                           <p>$13</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/pizza.png" alt="">
+                        <h1>Hawaiian Pizza</h1>
+                        <div class="control">
+                           <p>$16</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/pizza.png" alt="">
+                        <h1>Buffalo Pizza</h1>
+                        <div class="control">
+                           <p>$18</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/pizza.png" alt="">
+                        <h1>Meat Lovers Pizza</h1>
+                        <div class="control">
+                           <p>$19</p>
+                           <button>+</button>
+                        </div>
+                    </div>           
+                  </div>   
+            </div>
+    
+    
+            <div id="items" class="burgar-sec items">
+    
+                <div class="cards">
+            
+                    <div class="big-card">
+                        <img src="images/burgar.png" alt="">
+                        <h1>Classic Beef Burger</h1>
+                        <div class="control">
+                           <p>$15</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/burgar.png" alt="">
+                        <h1>Spicy Chicken Burger</h1>
+                        <div class="control">
+                           <p>$17</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/burgar.png" alt="">
+                        <h1>BBQ Bacon Burger</h1>
+                        <div class="control">
+                           <p>$18</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/burgar.png" alt="">
+                        <h1>Veggie Delight Burger</h1>
+                        <div class="control">
+                           <p>$14</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/burgar.png" alt="">
+                        <h1>Mushroom Swiss Burger</h1>
+                        <div class="control">
+                           <p>$19</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/burgar.png" alt="">
+                        <h1>Double Cheese Burger</h1>
+                        <div class="control">
+                           <p>$20</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/burgar.png" alt="">
+                        <h1>Teriyaki Chicken Burger</h1>
+                        <div class="control">
+                           <p>$16</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/burgar.png" alt="">
+                        <h1>Mexican Jalapeno Burger</h1>
+                        <div class="control">
+                           <p>$18</p>
+                           <button>+</button>
+                        </div>
+                    </div>           
+                  </div>   
+            </div>
+            
+    
+            <div id="items" class="chicken-sec items">
+    
+                <div class="cards">
+            
+                    <div class="big-card">
+                        <img src="images/chicken.png" alt="">
+                        <h1>Grilled Chicken</h1>
+                        <div class="control">
+                           <p>$14</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/chicken.png" alt="">
+                        <h1>Spicy Fried Chicken</h1>
+                        <div class="control">
+                           <p>$16</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/chicken.png" alt="">
+                        <h1>Honey Garlic Chicken</h1>
+                        <div class="control">
+                           <p>$18</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/chicken.png" alt="">
+                        <h1>BBQ Chicken</h1>
+                        <div class="control">
+                           <p>$17</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/chicken.png" alt="">
+                        <h1>Chicken Alfredo</h1>
+                        <div class="control">
+                           <p>$19</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/chicken.png" alt="">
+                        <h1>Lemon Herb Chicken</h1>
+                        <div class="control">
+                           <p>$15</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/chicken.png" alt="">
+                        <h1>Crispy Chicken Strips</h1>
+                        <div class="control">
+                           <p>$13</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/chicken.png" alt="">
+                        <h1>Teriyaki Chicken</h1>
+                        <div class="control">
+                           <p>$16</p>
+                           <button>+</button>
+                        </div>
+                    </div>           
+                  </div>   
+            </div>
+    
+    
+            <div id="items" class="milkshake-sec items">
+    
+                <div class="cards">
+            
+                    <div class="big-card">
+                        <img src="images/milkchek.png" alt="">
+                        <h1>Chocolate Milkshake</h1>
+                        <div class="control">
+                           <p>$8</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/milkchek.png" alt="">
+                        <h1>Strawberry Milkshake</h1>
+                        <div class="control">
+                           <p>$7</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/milkchek.png" alt="">
+                        <h1>Vanilla Milkshake</h1>
+                        <div class="control">
+                           <p>$6</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/milkchek.png" alt="">
+                        <h1>Oreo Milkshake</h1>
+                        <div class="control">
+                           <p>$9</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/milkchek.png" alt="">
+                        <h1>Banana Milkshake</h1>
+                        <div class="control">
+                           <p>$7</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/milkchek.png" alt="">
+                        <h1>Mango Milkshake</h1>
+                        <div class="control">
+                           <p>$8</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/milkchek.png" alt="">
+                        <h1>Peanut Butter Milkshake</h1>
+                        <div class="control">
+                           <p>$10</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/milkchek.png" alt="">
+                        <h1>Caramel Milkshake</h1>
+                        <div class="control">
+                           <p>$9</p>
+                           <button>+</button>
+                        </div>
+                    </div>           
+                  </div>   
+            </div>
+    
+            <div id="items" class="cola-sec items">
+    
+                <div class="cards">
+            
+                    <div class="big-card">
+                        <img src="images/cola.png" alt="">
+                        <h1>Coca-Cola</h1>
+                        <div class="control">
+                           <p>$2</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/cola.png" alt="">
+                        <h1>Pepsi</h1>
+                        <div class="control">
+                           <p>$2</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/cola.png" alt="">
+                        <h1>Fanta</h1>
+                        <div class="control">
+                           <p>$2.5</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/cola.png" alt="">
+                        <h1>Sprite</h1>
+                        <div class="control">
+                           <p>$2.5</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/cola.png" alt="">
+                        <h1>Mountain Dew</h1>
+                        <div class="control">
+                           <p>$3</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/cola.png" alt="">
+                        <h1>7Up</h1>
+                        <div class="control">
+                           <p>$2.5</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/cola.png" alt="">
+                        <h1>Dr Pepper</h1>
+                        <div class="control">
+                           <p>$3</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/cola.png" alt="">
+                        <h1>Diet Coke</h1>
+                        <div class="control">
+                           <p>$2.5</p>
+                           <button>+</button>
+                        </div>
+                    </div>           
+                  </div>   
+            </div>
+    
+    
+            <div id="items" class="coffee-sec items">
+    
+                <div class="cards">
+            
+                    <div class="big-card">
+                        <img src="images/coffie.png" alt="">
+                        <h1>Espresso</h1>
+                        <div class="control">
+                           <p>$4</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/coffie.png" alt="">
+                        <h1>Latte</h1>
+                        <div class="control">
+                           <p>$5</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/coffie.png" alt="">
+                        <h1>Cappuccino</h1>
+                        <div class="control">
+                           <p>$4.5</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/coffie.png" alt="">
+                        <h1>Americano</h1>
+                        <div class="control">
+                           <p>$3.5</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/coffie.png" alt="">
+                        <h1>Mocha</h1>
+                        <div class="control">
+                           <p>$6</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/coffie.png" alt="">
+                        <h1>Macchiato</h1>
+                        <div class="control">
+                           <p>$5.5</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/coffie.png" alt="">
+                        <h1>Flat White</h1>
+                        <div class="control">
+                           <p>$4.5</p>
+                           <button>+</button>
+                        </div>
+                    </div>
+            
+                    <div class="big-card">
+                        <img src="images/coffie.png" alt="">
+                        <h1>Irish Coffee</h1>
+                        <div class="control">
+                           <p>$7</p>
+                           <button>+</button>
+                        </div>
+                    </div>           
+                  </div>   
+            </div>
+
+
+          </div>
+
+      </div>
+
+
+     </div>
+
+
+
+      <!-- footer section -->
+     
+     
+      <footer>
+         
+        <div class="right">
+         
+         <ul>
+           <li><a href="#">home</a></li>
+           <li><a href="#">menus</a></li>
+           <li><a href="#">about us</a></li>
+           <li><a href="#">our cheffs</a></li>
+           <li><a href="#">Gontact</a></li>
+         </ul>
+
+        </div>
+
+
+        <div class="center">
+             
+         <img class="bone-left" src="images/back-column.png" alt="">
+         <img  class="bone-right" src="images/back-column.png" alt="">
+              
+         
+            <div class="logo"><img src="images/oregano.jpg" alt=""></div>
+              
+              <div class="info">
+                  <h2>ش سعد زغلول توريل الجديده,, Mansoura, Egypt</h2>
+                  <h2>Oregano@gmail.com</h2>
+                  <h2>0502201312</h2>
+                  <h2>Open : 09:00 am - 01:00 am</h2>
+              </div>
+        
+                
+              <div class="get-offers">
+                 <div class="title">
+                   <h1>Get News & Offers</h1>
+                   <h2>Subscribe us & Get <span>25% Off.</span></h2>
+                 </div>
+
+                 <div class="email">
+                    <div class="input">
+                     <i class="fa-regular fa-envelope"></i>
+                     <input type="text" placeholder="Your Email">
+                    </div> 
+
+                     <button>Subscribe</button>
+                 </div>
+              </div>
+              
+         </div>
+
+
+        <div class="left">
+         
+         <ul>
+           <li><a href="#">Facebook</a></li>
+           <li><a href="#">Instagram</a></li>
+           <li><a href="#">Twitter</a></li>
+           <li><a href="#">Youtube</a></li>
+           <li><a href="#">Google Map</a></li>
+        </ul>
+         
+
+       </div>
+
+
+       <p class="copyright">
+         © 2024 Oliver. All Rights Reserved | Crafted by <span>Mahmoud Nagy</span>
+       </p>
+      </footer>
+
+
+    <script src="main.js"></script>
+</body>
+</html>

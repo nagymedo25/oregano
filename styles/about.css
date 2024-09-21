@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --gold-- : hsla(38, 61%, 73%);
+    --gray-- : #161616;
+}
+
+/* font-family: "Merriweather", serif; */
+
+.about-sec {
+    background-color: var(--gray--);
+    display: flex;
+    flex-flow: column;
+    color: white;
+    font-family: "Merriweather", serif; 
+    padding: 40px 0;
+}
+
+
+.about-sec .title h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.about-sec .about {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row-reverse;
+    gap: 40px;
+    padding: 0 30px;
+    margin-bottom: 30px;
+}
+
+.about-sec .about .info {
+    width: 50%;
+}
+
+.about-sec .about .info h1 {
+    font-size: 30px;
+    color: var(--gold--);
+    margin-bottom: 5px;
+}
+
+.about-sec .about .info h1 span {
+    color: white;
+}
+
+.about-sec .about .info p {
+    font-size: 18px;
+    font-family: sans-serif;
+
+}
+
+.about-sec .about .image {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.about-sec .about .image img {
+    border-radius: 20px;
+    border: 1px solid var(--gold--);
+    transition: .5s;
+}
+
+.about-sec .about .image img:hover {
+    scale: 1.01;
+    box-shadow: 0px 0px 10px 0px var(--gold--);
+}
+
+.about-sec .chefs {
+    /* موقتا */
+    padding: 0 40px;
+    text-align: center;
+}
+
+.about-sec .chefs .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.about-sec .chefs .card {
+    width: fit-content;
+}
+
+.about-sec .chefs .card .iamge {
+     height: 170px;
+     border: 2px solid var(--gold--);
+     width: 170px;
+     border-radius: 50%;
+     display: grid;
+     place-items: center;
+     overflow: hidden;
+     margin-bottom: 10px;
+     background-color: rgb(161, 161, 161);
+     transition: .3s;
+}
+
+.about-sec .chefs .card .iamge:hover {
+    animation: image 1.5s ease infinite;
+    box-shadow: 0px 0px 10px 0px var(--gold--);
+
+}
+
+@keyframes image {
+    50% {
+        transform: translateY(-20px);
+        transition: 0.5s;
+    }
+    100% {
+        transform: translateY(0px);
+        transition: 0.5s;
+
+    }
+}
+
+
+
+.about-sec .chefs .card .iamge img {
+    object-fit: cover;
+    height: 170px;
+}
+
+.about-sec .chefs .card .iamge h2  {
+    font-size: 24px;
+}
+
+
+.about-sec .chefs .card  h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: sans-serif !important;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+}
+
+.about-sec .chefs .card i {
+    color: gold;
+}
+
+
+
+@media (max-width: 1115px) {
+    .about-sec .about {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: column;
+        gap: 40px;
+        padding: 0 30px;
+        margin-bottom: 30px;
+    }
+    
+    .about-sec .about .info {
+        width: 100%;
+    }
+    
+    .about-sec .about .info h1 {
+        font-size: 20px;
+        color: var(--gold--);
+        margin-bottom: 5px;
+    }
+    
+    
+    .about-sec .about .info p {
+        font-size: 16px;
+        font-family: sans-serif;
+    
+    }
+    
+    .about-sec .about .image {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .about-sec .about .image img {
+        height: 350px;
+        width: 100%;
+        padding: 0;
+        border-radius: 20px;
+        border: 1px solid var(--gold--);
+        transition: .5s;
+    }
+}

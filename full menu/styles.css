@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --gold-- : hsla(38, 61%, 73%);
+    --gray-- : #161616;
+}
+
+/* font-family: "Merriweather", serif; */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* تخصيص الشريط نفسه */
+::-webkit-scrollbar {
+    width: 12px; /* عرض شريط التمرير */
+}
+
+/* تخصيص المسار داخل شريط التمرير */
+::-webkit-scrollbar-track {
+    background: #272727; /* لون الخلفية */
+}
+
+/* تخصيص المقبض (الجزء المتحرك) */
+::-webkit-scrollbar-thumb {
+    background-color: var(--gold--); /* لون المقبض */
+}
+
+/* side bar */
+
+body {
+    position: relative;
+}
+
+.overLay {
+    height: 100%;
+    width: 100%;
+    background-color: #1616168f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    display: none;
+}
+
+
+.side-bar {
+    height: fit-content;
+    width: 400px;
+    background-color: var(--gray--);
+    position: fixed;
+    right: -1000px;
+    top: 0;
+    z-index: 999;
+    transition: 1s ease;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.active {
+    right: 0;
+}
+
+.close {
+    right: -1000px;
+}
+
+.side-bar .side-container {
+    height: 100%;
+    width: 90%;
+    position: relative;
+
+}
+
+.side-bar .side-container .head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.side-bar .side-container button {
+    background-color: var(--gold--);
+    height: 32px;
+    width: 32px;
+    border: 1px solid var(--gold--);
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.side-bar .side-container .head h1 {
+    font-weight: bold;
+    font-family: "Merriweather", serif;
+    color: var(--gold--);
+    font-size: 25px;
+
+}
+
+.side-bar .side-container button:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--gold--);
+}
+
+.content {
+    height: 370px;
+    width: 100%;
+    overflow-y: scroll;
+    margin-bottom: 1.5rem;
+}
+
+
+.side-bar .side-container .elements .element {
+    width: 90%;
+    border: 1px solid gray;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.side-bar .side-container .elements .element h1 {
+    color: gray;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+.side-bar .side-container .elements .element .price {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.side-bar .side-container .elements .element .price p {
+    font-size: 22px;
+    color: gray;
+    font-weight: bold;
+}
+
+.side-bar .side-container .elements .element .price button {
+    background-color: rgb(255, 57, 57);
+    height: 25px;
+    width: 25px;
+    border: 1px solid rgb(255, 57, 57);
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.side-bar .side-container .elements .element .price button:hover {
+    background-color: #16161600;
+    color: rgb(255, 57, 57);
+}
+
+
+.side-bar .side-container .controls {
+     width: 100%;
+}
+
+.side-bar .side-container .controls .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    border: 1px solid gray;
+    padding: 10px 10px;
+    margin: auto;
+    color: var(--gold--);
+    font-family: sans-serif;
+    margin-bottom: 1rem;
+}
+
+.side-bar .side-container .controls .total h1, span {
+    font-size: 22px;
+}
+
+.side-bar .side-container .controls button{
+   width: 100%;
+   height: 40px;
+}
+
+
+
+
+
+
+
+
+/* container */
+
+.container {
+    padding: 2rem 7rem;
+    background-color: var(--gray--);
+    color: var(--gold--);
+    font-family: sans-serif;
+    list-style: none;
+}
+
+
+.container header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.container header .logo  {
+    height: 50px;
+    border-radius: 10px;
+}
+
+.container  header input {
+    width: 86%;
+    height: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    padding-left: 40px;
+    font-size: 18px;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24px" height="24px"%3E%3Cpath d="M 10 2 C 5.589844 2 2 5.589844 2 10 C 2 14.410156 5.589844 18 10 18 C 11.847656 18 13.519531 17.371094 14.8125 16.3125 L 19.292969 20.707031 L 20.707031 19.292969 L 16.3125 14.8125 C 17.371094 13.519531 18 11.847656 18 10 C 18 5.589844 14.410156 2 10 2 Z M 10 4 C 13.324219 4 16 6.675781 16 10 C 16 13.324219 13.324219 16 10 16 C 6.675781 16 4 13.324219 4 10 C 4 6.675781 6.675781 4 10 4 Z"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 10px center;
+    outline: none;
+    background-color: #302e2e;
+    border: 2px solid var(--gray--);
+    color: white;
+    transition: .4s;
+}
+
+.container  header input:focus {
+    border: 2px solid var(--gold--);
+}
+
+.container  header input::placeholder {
+    padding-left: 0px;
+    color: white;
+}
+
+.container  header .cart-button {
+    height: 40px;
+    width: 40px;
+    background-color: var(--gold--);
+    border: 1px solid var(--gold--) ;
+    transition: .4s;
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+}
+
+.container  header .cart-button:hover {
+    color: var(--gold--);
+    background-color: #16161600;
+}
+
+
+/* back ground image */
+
+.container  .back-ground {
+    height: 300px;
+    width: 100%;
+    background-image: url(images/vege.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    line-height: 3rem ;
+    margin-bottom: 3rem;
+}
+
+.container  .back-ground h1,p {
+    color: white;
+    text-transform: capitalize;
+    text-shadow: 0px 0px 4px black;
+}
+
+.container  .back-ground h1 {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: "Merriweather", serif;
+
+}
+
+.container  .back-ground p {
+    font-size: 15px;
+}
+
+.container  .back-ground::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: rgba(22, 22, 22, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+/* filtter */
+
+.container  .filter-menu {
+    margin-bottom: 3rem;
+}
+
+.container  .filter-menu h1 {
+    padding-bottom: 2rem;
+}
+
+
+/* shared cards */
+
+.container   .cards {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    gap: 20px;
+} 
+
+.container  .filter-menu .card {
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-flow: column;
+    border: 1px solid var(--gold--);
+    background-color: rgb(39, 38, 38);
+    color: var(--gold--);
+    text-shadow: 0px 0px 4px black;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.container  .filter-menu .card:hover {
+    scale: 1.03;
+    box-shadow: 0px 0px 10px 0px var(--gold--);
+
+}
+
+.container  .filter-menu .card img {
+    height: 90px;
+    width: 80%;
+    padding-top: 10px;
+}
+
+.container  .filter-menu .card h1 {
+    font-size: 18px;
+    padding: 0;
+    text-transform: capitalize;
+
+}
+
+/* food items */
+
+.container  .food-items {
+    padding-bottom: 3rem;
+}
+
+.container  .food-items h1 {
+    padding-bottom: 2rem;
+}
+
+.container  .food-items .big-card {
+    height: 300px;
+    width: 250px;
+    border-radius: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-flow: column;
+    border: 1px solid var(--gold--);
+    background-color: rgb(39, 38, 38);
+    color: var(--gold--);
+    text-shadow: 0px 0px 4px black;
+}
+
+.container  .food-items .big-card img {
+    height: 180px;
+    width: 80%;
+    background-color: rgb(70, 68, 68);
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.container  .food-items .big-card h1 {
+    font-size: 110%;
+    padding: 0;
+    text-transform: capitalize;
+}
+
+.container  .food-items .big-card .control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+
+.container  .food-items .big-card .control button {
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    background-color: var(--gold--);
+    border: 1px solid var(--gold--);
+    color: black;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.container  .food-items .big-card .control button:hover {
+    color: var(--gold--);
+    background-color: #16161600;
+}
+
+/* sections styels */
+
+
+#items {
+    margin-bottom: 20px;
+}
+
+
+
+@media (max-width: 919px) {
+    
+    .container {
+        padding: 2rem 5rem;
+    }
+    
+    .container  header input {
+        width: 80%;
+    }
+}
+
+@media (max-width: 656px) {
+    
+    .container {
+        padding: 2rem 4rem;
+    }
+    
+    .container  header input {
+        width: 75%;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    .container {
+        padding: 2rem 1rem;
+    }
+    
+    .container  header input {
+        width: 75%;
+    }
+    
+    .container  .back-ground h1 {
+        font-size: 35px;
+        font-weight: bold;
+        font-family: "Merriweather", serif;
+    
+    }
+    
+    .container  .back-ground p {
+        font-size: 12px;
+    }
+    
+}
+
+@media (max-width: 477px) {
+    
+    .side-bar {
+        width: 100%;
+    }
+
+    .container {
+        padding: 2rem 1rem;
+    }
+    
+    .container  header input {
+        width: 75%;
+    }
+    
+    .container  .back-ground h1 {
+        font-size: 35px;
+        font-weight: bold;
+        font-family: "Merriweather", serif;
+    
+    }
+    
+    .container  .back-ground p {
+        font-size: 12px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
